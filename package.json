@@ -1,0 +1,9 @@
+{
+  "name": "dhanush-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern portfolio landing page for Dhanushkumar",
+  "scripts": {
+    "start": "python -m http.server 3000"
+  }
+}
