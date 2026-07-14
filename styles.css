@@ -1,14 +1,14 @@
 :root {
-  --bg: #07111f;
-  --bg-soft: #0f1b2e;
-  --surface: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.14);
-  --text: #f5f7fb;
-  --muted: #b8c2d1;
-  --accent: #5ee7df;
-  --accent-2: #7a5cff;
-  --border: rgba(255, 255, 255, 0.16);
-  --shadow: 0 20px 45px rgba(0, 0, 0, 0.24);
+  --bg: #050505;
+  --bg-soft: #111111;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --text: #f3f3f3;
+  --muted: #bdbdbd;
+  --accent: #d4d4d4;
+  --accent-2: #8a8a8a;
+  --border: rgba(255, 255, 255, 0.14);
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, var(--bg) 0%, #0d1728 100%);
+  background: linear-gradient(135deg, var(--bg) 0%, #121212 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -48,7 +48,7 @@ nav {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(7, 17, 31, 0.78);
+  background: rgba(5, 5, 5, 0.82);
   border-bottom: 1px solid var(--border);
 }
 
@@ -105,6 +105,7 @@ nav {
   background-position: center;
   opacity: 0;
   transform: scale(1.03);
+  filter: grayscale(1);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -117,7 +118,7 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(7, 17, 31, 0.92) 0%, rgba(7, 17, 31, 0.55) 60%, rgba(7, 17, 31, 0.3) 100%);
+  background: linear-gradient(90deg, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.65) 60%, rgba(5, 5, 5, 0.35) 100%);
 }
 
 .hero-content {
@@ -133,7 +134,7 @@ nav {
   display: inline-flex;
   align-self: flex-start;
   padding: 0.45rem 0.8rem;
-  border: 1px solid rgba(94, 231, 223, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
   color: var(--accent);
   font-size: 0.85rem;
@@ -180,9 +181,9 @@ nav {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: white;
-  box-shadow: 0 16px 35px rgba(122, 92, 255, 0.2);
+  background: linear-gradient(90deg, #ffffff, #bdbdbd);
+  color: #111111;
+  box-shadow: 0 16px 35px rgba(255, 255, 255, 0.12);
 }
 
 .btn-secondary {
@@ -246,7 +247,7 @@ nav {
 .tech-list span {
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
-  background: rgba(94, 231, 223, 0.14);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--accent);
   font-size: 0.8rem;
 }

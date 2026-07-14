@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1784050949569,
+    "name": "Dhanush",
+    "email": "dhanush@example.com",
+    "message": "Hello from the portfolio backend test",
+    "createdAt": "2026-07-14T17:42:29.569Z"
+  },
+  {
+    "id": 1784051024812,
+    "name": "Vicky",
+    "email": "ddhanushkumar870@gmail.com",
+    "message": "hii",
+    "createdAt": "2026-07-14T17:43:44.812Z"
+  }
+]
