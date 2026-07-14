@@ -4,6 +4,6 @@
   "private": true,
   "description": "Modern portfolio landing page for Dhanushkumar",
   "scripts": {
-    "start": "python -m http.server 3000"
+    "start": "node server.js"
   }
 }

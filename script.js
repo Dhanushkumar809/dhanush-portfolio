@@ -1,5 +1,7 @@
 const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
 const slideIndicators = Array.from(document.querySelectorAll('.indicator'));
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
 let currentSlide = 0;
 let slideTimer;
 
@@ -32,6 +34,47 @@ slideIndicators.forEach((dot, index) => {
     resetSlider();
   });
 });
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+
+    const payload = {
+      name: formData.get('name') || '',
+      email: formData.get('email') || '',
+      message: formData.get('message') || ''
+    };
+
+    if (formStatus) {
+      formStatus.textContent = 'Sending your message...';
+    }
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+
+      if (response.ok && result.ok) {
+        contactForm.reset();
+        if (formStatus) {
+          formStatus.textContent = 'Message sent successfully!';
+        }
+      } else {
+        if (formStatus) {
+          formStatus.textContent = result.error || 'Unable to send message.';
+        }
+      }
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = 'Network error. Please try again later.';
+      }
+    }
+  });
+}
 
 if (heroSlides.length) {
   showSlide(0);
